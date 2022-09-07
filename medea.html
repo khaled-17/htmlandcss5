@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<audio id="myAudio" controls>
+  <source src="<!DOCTYPE html>
+<html>
+<body>
+
+<audio id="myAudio" controls      >
+  <source src="bgsound.ogg" type="audio/ogg">
+  <source src="bgsound.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio><br>
+
+<button onclick="enableAutoplay()" type="button">Enable autoplay</button>
+<button onclick="disableAutoplay()" type="button">Disable autoplay</button>
+ 
+<script>
+document.getElementById("myAudio").addEventListener("mouseover", enableAutoplay);
+document.getElementById("myAudio").addEventListener("mouseout", mouseOut);
+
+
+
+
+var x = document.getElementById("myAudio");
+
+function enableAutoplay() { 
+  x.autoplay = true;
+  x.load();
+}
+ 
+function disableAutoplay() { 
+  x.autoplay = false;
+  x.load();
+} 
+  
+ </script> 
+ 
