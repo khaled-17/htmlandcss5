@@ -2,24 +2,51 @@
 <html>
 <body>
 
+  <h1 id="w">fsdfsdfdsfds</h1>
 <audio id="myAudio" controls>
   <source src="<!DOCTYPE html>
 <html>
 <body>
+  <audio>
+    <source src="audio/beep.mp3"></source>
+    <source src="audio/beep.ogg"></source>
+    Your browser isn't invited for super fun audio time.
+  </audio>
 
-<audio id="myAudio" controls      >
+
+
+ <audio id="myAudio" controls      >
   <source src="bgsound.ogg" type="audio/ogg">
   <source src="bgsound.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio><br>
 
+<video controls="controls" src="shuttle.mp4">
+  Your browser does not support the HTML5 Video element.
+</video>
+
+
+
+
+
 <button onclick="enableAutoplay()" type="button">Enable autoplay</button>
 <button onclick="disableAutoplay()" type="button">Disable autoplay</button>
  
 <script>
-document.getElementById("myAudio").addEventListener("mouseover", enableAutoplay);
-document.getElementById("myAudio").addEventListener("mouseout", mouseOut);
+var audio = document.getElementById("w");
+audio.play();
 
+// or with an ID
+
+var audio = document.getElementById("mySoundClip");
+audio.play();
+
+
+
+
+
+document.getElementById("myAudio").addEventListener("mouseover", enableAutoplay);
+ 
 
 
 
@@ -27,7 +54,7 @@ var x = document.getElementById("myAudio");
 
 function enableAutoplay() { 
   x.autoplay = true;
-  x.load();
+  x.ح();
 }
  
 function disableAutoplay() { 
