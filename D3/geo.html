@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<body>
+ 
+
+    <select id="itemsList" onchange="gettingList()">
+        <option>Please select the option</option>
+        <option value="26.5627,31.6908">Soap</option>
+        <option value="44.987509,5.070317">Sugar</option>
+       </select>
+      <br><br>
+      <input type="text" id="plase">  
+ 
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+ 
+
+    <!-- Geolocation -->
+     <button onclick="mylocation()">mylocation</button>
+    <p id="para"></p>  
+
+
+    
+    <script>
+
+var selectItem = document.getElementById('itemsList');
+
+var lat;
+var lon;
+
+function gettingList() {
+  var plase=document.getElementById('plase').value = selectItem.value;
+var arrayplase=plase.split(",")
+lat=arrayplase[0]
+lon=arrayplase[1]
+getLocation()
+console.log(lat,lon);
+
+ 
+}
+
+
+
+
+// function mylocation() {
+
+//     var x = document.getElementById("demo");
+
+// function getLocation() {
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(showPosition);
+//   } else { 
+//     x.innerHTML = "Geolocation is not supported by this browser.";
+//   }
+// }
+
+// function showPosition(position) {
+//   x.innerHTML = "Latitude: " + position.coords.latitude + 
+//   "<br>Longitude: " + position.coords.longitude;
+// } 
+// }
+
+
+
+
+
+        var para = document.getElementById("para");
+
+        function getLocation() {
+            // check availibility of geolocation inside browser
+            if (navigator.geolocation ) //true
+            {
+                //get permission
+                navigator.geolocation.getCurrentPosition(showPosition,showError);
+            } else { //false
+                para.innerHTML = "Geolocation is not supported on your browser";
+
+            }
+
+
+        }
+
+        // get permission => allow
+        function showPosition(position) {
+            console.log(position);
+            // console.log(position.coords);
+            // var lat = position.coords.latitude;
+            // var lon = position.coords.longitude;
+            // console.log(lat);
+            // console.log(lon);
+            para.innerHTML = "Latitude: " + lat + "<br> Longitude: " + lon;
+            // query string
+            // embed
+            // var url="https://www.google.com/maps?q="+lat+","+lon;
+            var url = "http://maps.google.com/maps?q=" + lat + "," + lon;
+             
+            window.open(url );
+        }
+
+        // get permission => block
+        //errors => code
+
+        //enum
+        function showError(error) {
+            console.log(error);
+            console.log(error.code);
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    para.innerHTML = "User denied the request for Geolocation."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    para.innerHTML = "Location information is unavailable."
+                    break;
+                case error.TIMEOUT:
+                    para.innerHTML = "The request to get user location timed out."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    para.innerHTML = "An unknown error occurred."
+                    break;
+            }
+
+
+        }
+
+
+
+//         var x = document.getElementById("demo");
+
+// function getLocation() {
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(showPosition);
+//   } else { 
+//     x.innerHTML = "Geolocation is not supported by this browser.";
+//   }
+// }
+
+// function showPosition(position) {
+  
+//   var url = "http://maps.google.com/maps?q=" + position.coords.latitude + "," +  position.coords.longitude;
+             
+//             window.open(url );
+
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+
+</html>

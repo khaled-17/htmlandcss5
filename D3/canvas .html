@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="sad.png" alt="sad">
+    <img src="smiley.png" alt="sad">
+
+
+    <canvas id="myCanvas" width="700" height="700" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        
+
+<script>
+    var imga=document.images[0];
+    var imgs=document.images[1];
+
+    var canvas=document.getElementById("myCanvas");
+
+   var ctx= canvas.getContext("2d");
+
+   ctx.drawImage(imga,100,100,100,100)
+
+   canvas.addEventListener("mouseover",function() {
+         ctx.drawImage(imgs,100,100,400,400)          
+     
+   })
+
+   canvas.addEventListener("mouseout",function() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+         ctx.drawImage(imga,100,100,100,100)          
+     
+   })
+
+</script>
+
+
+</body>
+</html>

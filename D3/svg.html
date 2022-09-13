@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg viewBox="0 0 200 200" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+        <circle id="colorr"  cx="100" cy="100"
+            fill="yellow" r="78" stroke="black" stroke-width="3" />
+        <g id="eyes">
+            <circle cx="61" cy="82" r="12" />
+            <circle cx="127" cy="82" r="12" />
+        </g>
+        <path d="m136.81 116.53c.69 26.17-64.11 42-81.52-.73" style="fill:none; stroke: black; stroke-width: 3;" />
+
+    </svg>
+
+    
+
+
+
+    <script>
+      
+         document.getElementById("eyes").addEventListener("mouseover", function(event){
+              console.log("d")
+                  event.target.style.fill="red"
+ 
+         });
+
+         document.getElementById("eyes").addEventListener("mouseout", function(event){
+            console.log( event.target)
+                event.target.style.fill="green"
+
+       });
+
+
+
+     
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+<!-- 
+    
+<html>
+<head>
+    <script>
+function setColor(color)
+{
+    document.getElementById("rect").style.fill = color;
+}
+    </script>
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="width: 300px; height: 250px">
+  <rect x="50" y="20" rx="10" ry="10" width="200" height="200" style="fill:red; stroke:black; stroke-width:3" id="rect" />
+</svg>
+
+    <button onclick="setColor('red');">Red</button>
+    <button onclick="setColor('green');">Green</button>
+    <button onclick="setColor('blue');">Blue</button>
+    
+</body>
+</html>
+
+ -->

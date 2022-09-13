@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 ,#div2 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+<!-- /ddddddddddd -->
+<script>
+function ondragoverq(ev) {
+  ev.preventDefault();
+}
+
+function ondragstartq(ev) {
+  ev.dataTransfer.setData("key", ev.target.id);
+
+}
+
+function ondropq(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("key");
+  ev.target.appendChild(document.getElementById(data));
+  clickCounter() }
+
+  sessionStorage.setItem("clickcount", 0);
+
+function clickCounter() {
+     sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+   
+  document.getElementById("demo").innerHTML = sessionStorage.clickcount;
+}
+function clicktozeroz() {
+    sessionStorage.setItem("clickcount", 0);
+    document.getElementById("demo").innerHTML = sessionStorage.clickcount;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>    
+
+
+<!-- ///////// -->
+</head>
+<body>
+
+    <p><button onclick="clicktozeroz()" type="button">Count=0</button></p>
+    <p id="demo">0</p>
+<div id="div1" ondrop="ondropq(event)" ondragover="ondragoverq(event)"></div>
+<br>
+<div id="div2" id="div1" ondrop="ondropq(event)" ondragover="ondragoverq(event)">
+    <img id="drag1" src="sad.png" draggable="true" ondragstart="ondragstartq(event)" width="336" height="69">
+
+
+</div>
+</body>
+</html>
+
