@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="#home"><i class="fa fa-fw fa-home"></i>Home</a></li>
+        <li> <a href="#news"><i class="fa fa-fw fa-search"></i> Search</a></li>
+        <li> <a href="#contact"><i class="fa fa-fw fa-user"></i> Login</a></li>
+      </ul>
+    </div>
+    <div class="fontan">
+      <h1>. font Sofia </h1>
+      <p> Use Custom font for any paragraph
+        (Search for new fonts, Do not use the font given in the lecture) </p>
+    </div>
+  
+  
+  
+  
+  
+  
+    <div class="contenar">
+  
+  
+      <img class="contACT" onclick="named(this)" src="cvimg.jpg" width="100" height="100">
+  
+      <div class="chip">
+        <span style="display: inline;"> John Doe </span>
+  
+        <span class="closebtn" onclick="openclosecontct(this)">&times;</span>
+      </div>
+  
+  
+    </div>
+  
+  
+
+
+
+
+
+
+    <style>
+body {
+      margin: 0;
+      font-family: 'Sofia';
+      font-size: 22px;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+      width: 500px;
+      border-radius: 55px;
+
+    }
+
+    li {
+
+      display: inline;
+      list-style-type: none;
+      display: inline-block
+    }
+
+    /* ul{
+
+
+} */
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+      transition-delay: background-color 9s;
+
+      /* //tte */
+      transition-property: background;
+      transition-duration: 2s;
+    }
+
+    .chip {
+      border-radius: 0 20% 20% 0;
+       background-color: rgb(116, 109, 109);
+      margin-left: -28px;
+      text-align: right;
+       height: 100px;
+      width: 190px;
+      display: inline-block;
+      line-height: 50px;
+    }
+
+    @keyframes x {
+      from {
+        width: 180px;
+      }
+
+      to {
+        width: 0px;
+        display: none;
+      }
+    }
+
+    @keyframes y {
+      from {
+        width: 0px;
+      }
+
+      to {
+        width: 180px;
+      }
+    }
+
+    .chipopen {
+
+      animation: x 2s;
+    }
+
+    .chipclose {
+
+      animation: y 2s;
+    }
+
+
+    .contenar {
+      display: flex;
+    }
+
+    .contACT {
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+
+
+    </style>
+</body>
+</html>

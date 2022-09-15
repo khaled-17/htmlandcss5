@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+  }
+
+  /* headr */
+  header{
+    text-align: center;
+    
+  }
+  header h1{
+
+background-color: blueviolet;
+
+
+
+  }
+  nav{
+    overflow: hidden;
+    background-color: #333;
+
+  }
+nav a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+  .flex-container {
+    display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+
+  }
+  
+  .flex-item-left {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: calc(100%/3);
+   }
+                 .box{
+                    background-color: azure;
+                    font-size: large;
+                    padding: 10px;
+                    text-align: left;
+                 }
+                    .online{
+
+                        font-size:15px;
+                        margin: 100px;
+                    }
+                 .online img{
+                    height:100px;
+                    width: auto;
+ 
+
+                 }
+                 
+                 video{
+                    width: 50%;
+                    height: auto;
+                  }
+
+
+
+
+
+
+
+
+
+
+   .flex-item-nos {
+    background-color: dodgerblue;
+    padding: 10px;
+    flex: 60%;
+    font-size: 20px;
+  }
+
+
+
+
+
+  .flex-item-right  {
+    background-color: rgb(120, 255, 30);
+    flex: calc(100%/3);
+    font-size: 20px;
+
+   }
+                        .person img{
+                            border:solid ;
+                            margin-top: 100px;
+                            height:200px;
+                            width: auto;
+                        }
+                        .news{
+                            background-color: black;
+                        }
+                        .news p{
+                            margin: 20px auto;
+
+                            border:solid ;
+                            text-align: center;
+
+                            width: 70%;
+                        }
+
+   @media (max-width: 800px) {
+    /* .flex-container {
+      flex-direction: column;
+    } */
+
+    nav    {
+      width: 100%;
+   }
+    nav  a {
+        width: 100%;
+     }
+
+
+    header {
+        float: none;
+        width: 100%;
+      }
+     
+ 
+  }
+
+  @media (max-width: 600px) {
+    .flex-item-nos {
+      width: 60%
+       
+     };
+     .flex-item-left{
+      width: 40%;
+     }
+ 
+    }
+
+   
+     
+ 
+  
+
+ 
+
+
+  
+ 
+
+
+
+ 
+
+
+
+
+   /* footer */
+   .footer{
+    background-color:#e5e5e5;
+    text-align:center;
+    padding:10px;
+    margin-top:7px;
+  }
+  
